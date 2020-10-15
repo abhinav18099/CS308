@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
 	{
 		printf("Sqrt of %d is %f\n",input,sqrt(input));
 	}
-	printf("End of program.Exiting.\n");
+	printf("End of program.Exiting.changing this printf to see the mergetool\n");
 	return(0);
 
 } // end main
