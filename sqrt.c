@@ -12,7 +12,7 @@ positive number. */
 int main(int argc, char* argv[]) {
 	
 	if (argc != 2) {
-		printf("Usage: sqrt input\n\n");
+		printf("Usage: sqrt input\n");
 		exit(-1);
 	}
 	
@@ -22,12 +22,20 @@ int main(int argc, char* argv[]) {
 	num = strtol(argv[1],&endp,0);
 	if (endp == NULL || *endp != (char)0)
     { 
-	   printf("program argument %s is not a number\n", argv[1]);
+	   printf("program argument %s is not a integer\n", argv[1]);
        exit (-1);
 	}; 
 	
 	int input = atoi(argv[1]);
-	printf("Sqrt of %d is %f\n",input,sqrt(input));
+	if(input < 0)
+	{
+		input = -1*input;
+		printf("Sqrt of %d is %fi\n",-1*input,sqrt(input));
+	}
+	else
+	{
+		printf("Sqrt of %d is %f\n",input,sqrt(input));
+	}
 	printf("End of program.Exiting.\n");
 	return(0);
 
